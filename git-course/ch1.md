@@ -24,6 +24,7 @@ C’est un outil de travail collaboratif sur un projet informatique, il permet :
 
 ![Torvalds](/git-course/images/ordinateur-local.png "Le titre de mon image")
 
+
 ##### 2 - Centralisé
 ![Torvalds](/git-course/images/centralized-cvs.png "Le titre de mon image")
 

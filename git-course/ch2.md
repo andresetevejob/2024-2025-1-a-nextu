@@ -164,3 +164,8 @@ git stash list
 ```
 Que constatez vous ?
 Git a mis votre fichier todo-stash.txt dans une liste de fichier qui pourra être recuperer plus tard
+
+#### Ignorez certains fichiers
+Vous souhaitez que certains de vos fichiers ne soient pas indexables par git.Généralement ce sont des fichiers de configuration personnel de votre projet que vous ne souhaitez pas partagez avec l'équipe.
+
+Pour ce faire, vous devez créer un fichier .gitignore dans votre repertoire de 
