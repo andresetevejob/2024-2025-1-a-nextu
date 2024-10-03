@@ -1,7 +1,7 @@
 # GIT
 
 ## Histoire
-![Architecture](/git-course/images/torvalds.png "Le titre de mon image")
+![Torvalds](/git-course/images/torvalds.png "Le titre de mon image")
 
 Git a été crée par Linux Torvalds en 2005, c’est un programmeur finlandais et aussi le créateur du noyau linux.
 La naissance de cette solution est partie d’un désaccord entre Linus Torvalds et la société BitKeeper qui à l’origine fournissait le système de contrôle de version utilisé pour le noyau Linux.
@@ -101,3 +101,66 @@ Exemple : je souhaite indexer tous les fichier .js
 ```
   git add *.js
 ```
+
+### Commit
+
+#### premier commit
+Vous souhaitez sauvegarder le fichier précedemment indexé dans la base de données de git.
+Vous devez faire la commande
+```
+git commit -m "Mon premier commit"
+```
+Git enregistre dans sa base votre fichier indexé cela s'appelle un commit
+
+#### historique des commits
+```
+git log
+```
+Que constatez vous ?
+Git vous afficher les informations relatifs à votre commit ainsi que son auteur, la date, etc ...
+
+Afficher sur une seule ligne
+```
+git log --pretty=oneline
+```
+
+Formatter l'affichage 
+```
+git log --pretty=format:"%h - %an, %ar : %s"
+```
+
+
+Format d'affichage graph
+```
+git log --pretty=format:"%h %s" --graph
+```
+
+##### Modification d'un commit
+
+Créer un nouveau fichier readme.md dans votre projet todo-list, ajouter le contenu suivant : # Mon projet todo. Indexer ce dernier et ensuite sauvegarder le au moyen d'un commit
+```
+git add readme.md
+git commit -m "ajout de la documentation"
+```
+
+Créer un nouveau fichier contributing.md, ajoutez le contenu suivant : # Contribution .
+Vous vous rendez compte que ce fichier récemment crée devait faire partir du même commit que le readme.
+Pas de panique, faites les commandes ci-dessous:
+```
+git add contributing.md
+git commit --amend
+```
+Que contastez vous ? Git donne la possibilité de rajouter le fichier nouvellement indexé au précédent commit
+
+#### Mettre des fichiers en brouillons
+Créer un nouveau fichier todo-stash.txt dans votre projet todo, rajouter y le contenu suivant : 
+"Les tâches que souhaiteraient rajouter au fichier todo"
+Vous voulez sauvegarder ce fichier comme un brouillon qui vous servira pour plus tard.
+Faites les commandes suivantes
+```
+git stash -u -m "ma fiche brouillon"
+git status
+git stash list
+```
+Que constatez vous ?
+Git a mis votre fichier todo-stash.txt dans une liste de fichier qui pourra être recuperer plus tard
