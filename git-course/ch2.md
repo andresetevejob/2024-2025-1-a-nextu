@@ -168,4 +168,7 @@ Git a mis votre fichier todo-stash.txt dans une liste de fichier qui pourra êtr
 #### Ignorez certains fichiers
 Vous souhaitez que certains de vos fichiers ne soient pas indexables par git.Généralement ce sont des fichiers de configuration personnel de votre projet que vous ne souhaitez pas partagez avec l'équipe.
 
-Pour ce faire, vous devez créer un fichier .gitignore dans votre repertoire de 
+Pour ce faire, vous devez créer un fichier .gitignore dans votre repertoire de et lister les fichiers que vous souhaitez ne pas indexer
+
+NB : si un fichier a déja été sauvergarder au moyen d'un commit, et que voulez le rajouter plus tard dans un .gitignore, il faudrait supprimer ce dernier de la base de git via la commande
+git rm --cached nom_fichier et après le rajouter dans le .gitignore
