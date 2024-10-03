@@ -172,3 +172,7 @@ Pour ce faire, vous devez créer un fichier .gitignore dans votre repertoire de 
 
 NB : si un fichier a déja été sauvergarder au moyen d'un commit, et que voulez le rajouter plus tard dans un .gitignore, il faudrait supprimer ce dernier de la base de git via la commande
 git rm --cached nom_fichier et après le rajouter dans le .gitignore
+
+
+#### Les differentes zones d'operation dans git
+![Torvalds](/git-course/images/etat-git.png "Le titre de mon image")
